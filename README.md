@@ -1,4 +1,4 @@
-# Webcam Easy JS
+# Mobile Capture
 This is a javascript library for accessing webcam stream and taking photos.
 
 You can easily add it as a module to your own app.
