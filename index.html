@@ -21,18 +21,18 @@
 </head>
 
 <body>
-    <main id="webcam-app">
-        <img src="" alt="img" id="uploadImg">
-        <button id="cameraFlip" class="btn d-none"></button>
+    <main id="webcam-app" class="webcam-app">
+        <img src="" alt="img" id="uploadImg" class="uploadImg">
+        <button id="cameraFlip" class="btn d-none cameraFlip"></button>
         <div class="form-control webcam-start" id="webcam-control">
             <div class="webcam-start__bg"></div>
             <label class="form-switch">
                 <input type="checkbox" id="webcam-switch">
                 <i></i>
-                <span id="webcam-caption">Click to Start Camera</span>
+                <span id="webcam-caption" class="webcam-caption">Click to Start Camera</span>
             </label>
         </div>
-        <div id="errorMsg" class="col-12 col-md-6 alert-danger d-none">
+        <div id="errorMsg" class="col-12 col-md-6 alert-danger d-none errorMsg">
             Fail to start camera, please allow permision to access camera. <br />
             If you are browsing through social media built in browsers, you would need to open the page in Sarafi
             (iPhone)/ Chrome (Android)
@@ -41,8 +41,8 @@
         <div class="md-modal md-effect-12">
             <div id="app-panel" class="app-panel md-content row p-0 m-0">
                 <div id="webcam-container" class="webcam-container col-12 d-none p-0 m-0">
-                    <video id="webcam" autoplay playsinline width="640" height="480"></video>
-                    <canvas id="canvas" class="d-none"></canvas>
+                    <video id="webcam" class="webcam" autoplay playsinline width="640" height="480"></video>
+                    <canvas id="canvas" class="d-none canvas"></canvas>
                     <div class="flash"></div>
                     <audio id="snapSound" src="audio/snap.wav" preload="auto"></audio>
                 </div>

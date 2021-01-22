@@ -1,4 +1,4 @@
-#webcam-app {
+.webcam-app {
   background-image   : url(../images/metal-background.jpg);
   background-position: center center;
   background-repeat  : no-repeat;
@@ -19,7 +19,7 @@
   width : 100vw;
 }
 
-#uploadImg {
+.uploadImg {
   border-radius: 6px;
   display      : none;
   left         : 4px;
@@ -172,7 +172,7 @@
   width           : 100vw;
 }
 
-#webcam {
+.webcam {
   display       : block;
   height        : 100vh;
   margin        : auto;
@@ -249,7 +249,7 @@
   transform        : scale(1);
 }
 
-#errorMsg {
+.errorMsg {
   left    : 0;
   padding : 20px;
   position: fixed;
@@ -258,7 +258,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  #errorMsg {
+  .errorMsg {
     left    : 20vw;
     padding : 20px;
     position: fixed;
@@ -267,7 +267,7 @@
   }
 }
 
-#cameraFlip {
+.cameraFlip {
   background-color   : black;
   background-image   : url(../images//camera_flip_white.png);
   background-position: center center;
@@ -315,7 +315,7 @@
   z-index         : 999999;
 }
 
-#canvas {
+.canvas {
   background-color: transparent;
   height          : 100vh;
   left            : 0;
@@ -336,7 +336,7 @@
 }
 
 @media screen and (min-width: 768px) and (orientation:portrait) {
-  #webcam {
+  .webcam {
     transform        : translateX(-20%) scale(-1, 1) !important;
     -webkit-transform: translateX(-20%) scale(-1, 1) !important;
     -moz-transform   : translateX(-20%) scale(-1, 1) !important;
@@ -344,7 +344,7 @@
     -o-transform     : translateX(-20%) scale(-1, 1) !important;
   }
 
-  #canvas {
+  .canvas {
     -moz-transform   : translateX(-20%);
     -ms-transform    : translateX(-20%);
     -o-transform     : translateX(-20%);
@@ -354,7 +354,7 @@
 }
 
 @media screen and (max-width: 420px) and (orientation:portrait) {
-  #webcam {
+  .webcam {
     -moz-transform   : translateX(-15%) scale(-0.7, 0.7) !important;
     -ms-transform    : translateX(-15%) scale(-0.7, 0.7) !important;
     -o-transform     : translateX(-15%) scale(-0.7, 0.7) !important;
@@ -362,7 +362,7 @@
     transform        : translateX(-15%) scale(-0.7, 0.7) !important;
   }
 
-  #canvas {
+  .canvas {
     -moz-transform   : translateX(-15%) scale(0.7);
     -ms-transform    : translateX(-15%) scale(0.7);
     -o-transform     : translateX(-15%) scale(0.7);
@@ -371,6 +371,6 @@
   }
 
   .cameraControls {
-    bottom    : 14vh;
+    bottom: 14vh;
   }
 }
