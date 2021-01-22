@@ -284,7 +284,7 @@
 
 .cameraControls {
   background: transparent;
-  bottom    : 14vh;
+  bottom    : 7vh;
   opacity   : 0.7;
   padding   : 10px;
   position  : absolute;
@@ -369,10 +369,8 @@
     -webkit-transform: translateX(-15%) scale(0.7);
     transform        : translateX(-15%) scale(0.7);
   }
-}
 
-@media screen and (max-width: 420px) and (orientation:landscape) {
-  #webcam {
-    transform: scale(-0.7, 0.7) !important;
-}
+  .cameraControls {
+    bottom    : 14vh;
+  }
 }
