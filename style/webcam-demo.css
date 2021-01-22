@@ -284,7 +284,7 @@
 
 .cameraControls {
   background: transparent;
-  bottom    : 7vh;
+  bottom    : 14vh;
   opacity   : 0.7;
   padding   : 10px;
   position  : absolute;
@@ -337,36 +337,42 @@
 
 @media screen and (min-width: 768px) and (orientation:portrait) {
   #webcam {
-    transform: translateX(-20%) scale(-1, 1) !important;
+    transform        : translateX(-20%) scale(-1, 1) !important;
     -webkit-transform: translateX(-20%) scale(-1, 1) !important;
-    -moz-transform: translateX(-20%) scale(-1, 1) !important;
-    -ms-transform: translateX(-20%) scale(-1, 1) !important;
-    -o-transform: translateX(-20%) scale(-1, 1) !important;
-}
+    -moz-transform   : translateX(-20%) scale(-1, 1) !important;
+    -ms-transform    : translateX(-20%) scale(-1, 1) !important;
+    -o-transform     : translateX(-20%) scale(-1, 1) !important;
+  }
 
   #canvas {
-    -moz-transform: translateX(-20%);
-    -ms-transform: translateX(-20%);
-    -o-transform: translateX(-20%);
+    -moz-transform   : translateX(-20%);
+    -ms-transform    : translateX(-20%);
+    -o-transform     : translateX(-20%);
     -webkit-transform: translateX(-20%);
-    transform: translateX(-20%);
-}
+    transform        : translateX(-20%);
+  }
 }
 
 @media screen and (max-width: 420px) and (orientation:portrait) {
   #webcam {
-    -moz-transform: translateX(-15%) scale(-0.7, 0.7) !important;
-    -ms-transform: translateX(-15%) scale(-0.7, 0.7) !important;
-    -o-transform: translateX(-15%) scale(-0.7, 0.7) !important;
+    -moz-transform   : translateX(-15%) scale(-0.7, 0.7) !important;
+    -ms-transform    : translateX(-15%) scale(-0.7, 0.7) !important;
+    -o-transform     : translateX(-15%) scale(-0.7, 0.7) !important;
     -webkit-transform: translateX(-15%) scale(-0.7, 0.7) !important;
-    transform: translateX(-15%) scale(-0.7, 0.7) !important;
-}
+    transform        : translateX(-15%) scale(-0.7, 0.7) !important;
+  }
 
   #canvas {
-    -moz-transform: translateX(-15%) scale(0.7);
-    -ms-transform: translateX(-15%) scale(0.7);
-    -o-transform: translateX(-15%) scale(0.7);
+    -moz-transform   : translateX(-15%) scale(0.7);
+    -ms-transform    : translateX(-15%) scale(0.7);
+    -o-transform     : translateX(-15%) scale(0.7);
     -webkit-transform: translateX(-15%) scale(0.7);
-    transform: translateX(-15%) scale(0.7);
+    transform        : translateX(-15%) scale(0.7);
+  }
+}
+
+@media screen and (max-width: 420px) and (orientation:landscape) {
+  #webcam {
+    transform: scale(-0.7, 0.7) !important;
 }
 }
