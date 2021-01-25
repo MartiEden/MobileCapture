@@ -52,118 +52,41 @@
   z-index    : 9999;
 }
 
-.form-control .webcam-start__bg {
-  background-color: #060606;
-  border-radius   : 3px;
-  bottom          : 0;
-  left            : 0;
-  opacity         : .2;
-  position        : absolute;
-  right           : 0;
-  top             : 0;
-  z-index         : 2;
-}
-
-.form-control.webcam-on {
-  -moz-transform   : translateX(-50%);
-  -ms-transform    : translateX(-50%);
-  -o-transform     : translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  bottom           : auto;
-  left             : 50%;
-  position         : fixed;
-  right            : auto;
-  top              : 2vh;
-  transform        : translateX(-50%);
-  transition       : all 100ms;
-  width            : 145px !important;
-}
-
-.form-control.webcam-off {
-  transition: all 100ms;
-}
-
-
 .form-switch {
   -webkit-tap-highlight-color: transparent;
+  align-items                : center;
   cursor                     : pointer;
   display                    : flex;
+  justify-content            : center;
   position                   : relative;
   z-index                    : 3;
 }
 
-.form-switch i {
-  background-color: #e6e6e6;
-  border-radius   : 25px;
-  display         : inline-block;
-  height          : 30px;
-  margin-right    : .5rem;
-  position        : relative;
-  transition      : all 0.3s linear;
-  vertical-align  : text-bottom;
-  width           : 60px;
+.switch-button {
+  background   : transparent;
+  border-radius: 4px;
+  border       : 1px solid #ffffff;
+  box-sizing   : border-box;
+  color        : #ffffff;
+  padding      : 8px 14px;
 }
 
-.form-switch i::before {
-  background-color: #fff;
-  border-radius   : 15px;
-  content         : "";
-  height          : 25px;
-  left            : 0;
-  position        : absolute;
-  transform       : translate3d(2px, 2px, 0) scale3d(1, 1, 1);
-  transition      : all 0.25s linear;
-  width           : 56px;
+.switch-button:focus {
+  outline: none;
 }
 
-.form-switch i::after {
-  background-color: #fff;
-  border          : 1px solid grey;
-  border-radius   : 15px;
-  box-shadow      : 2px 2px 2px rgba(0, 0, 0, 0.25);
-  content         : "";
-  height          : 26px;
-  left            : 0;
-  position        : absolute;
-  transform       : translate3d(2px, 2px, 0);
-  transition      : all 0.2s ease-in-out;
-  width           : 26px;
+.switch-button:active {
+  -moz-transform   : translateY(2px);
+  -ms-transform    : translateY(2px);
+  -o-transform     : translateY(2px);
+  -webkit-transform: translateY(2px);
+  transform        : translateY(2px);
 }
 
-.form-switch:active i::after {
-  width    : 60px;
-  transform: translate3d(2px, 2px, 0);
+.switch-fixed {
+  position: fixed;
+  top     : 2vh;
 }
-
-.form-switch:active input:checked+i::after {
-  transform: translate3d(16px, 2px, 0);
-}
-
-.form-switch input {
-  display: none;
-}
-
-.form-switch input:checked+i {
-  background-color: #4BD763;
-}
-
-.form-switch input:checked+i::before {
-  transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
-}
-
-.form-switch input:checked+i::after {
-  transform: translate3d(30px, 2px, 0);
-}
-
-.form-switch input:disabled+i {
-  background-color: #eeeeee;
-  cursor          : not-allowed;
-}
-
-.form-switch input:disabled+i::after {
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.10);
-}
-
 
 .app-panel {
   background-color: black;

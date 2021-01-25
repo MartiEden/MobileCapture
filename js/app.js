@@ -9,8 +9,9 @@ const webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement
 let upload_img = '';
 
 
-$("#webcam-switch").change(function () {
-    if (this.checked) {
+$("#webcam-switch").on('click', function () {
+    if (jQuery(this).val() === 'Click to Start Camera') {
+        $("#webcam-switch").hide();
         $('.md-modal').addClass('md-show');
         webcam.start()
             .then(result => {
@@ -48,9 +49,11 @@ function displayError (err = '') {
 function cameraStarted () {
     $("#errorMsg").addClass("d-none");
     $('.flash').hide();
-    $("#webcam-caption").html("on");
-    $("#webcam-control").removeClass("webcam-off");
-    $("#webcam-control").addClass("webcam-on");
+    $("#webcam-switch").show();
+    $("#webcam-switch").val("Turn off camera");
+    $("#webcam-switch").addClass('switch-fixed');
+    // $("#webcam-control").removeClass("webcam-off");
+    // $("#webcam-control").addClass("webcam-on");
     $(".webcam-container").removeClass("d-none");
     if (webcam.webcamList.length > 1) {
         $("#cameraFlip").removeClass('d-none');
@@ -63,11 +66,12 @@ function cameraStarted () {
 function cameraStopped () {
     $("#errorMsg").addClass("d-none");
     $("#wpfront-scroll-top-container").removeClass("d-none");
-    $("#webcam-control").removeClass("webcam-on");
-    $("#webcam-control").addClass("webcam-off");
+    // $("#webcam-control").removeClass("webcam-on");
+    // $("#webcam-control").addClass("webcam-off");
     $("#cameraFlip").addClass('d-none');
     $(".webcam-container").addClass("d-none");
-    $("#webcam-caption").html("Click to Start Camera");
+    $("#webcam-switch").val("Click to Start Camera");
+    $("#webcam-switch").removeClass("switch-fixed");
     $('.md-modal').removeClass('md-show');
 }
 
@@ -131,7 +135,7 @@ $("#resume-camera").click(function () {
 
 $("#exit-app").click(function () {
     removeCapture();
-    $("#webcam-switch").prop("checked", false).change();
+    $("#webcam-switch").click();
     hideUploadImage();
 });
 
